@@ -1,4 +1,4 @@
-import { BadRequest } from "../../error/apiError.js";
+import { BadRequest } from "../../exceptions/apiError.js";
 
 export function validate(schema) {
   return (req, res, next) => {

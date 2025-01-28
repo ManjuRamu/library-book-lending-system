@@ -1,4 +1,5 @@
-import {  DuplicateError, NotFoundError } from "../error/apiError.js";
+import { final } from "../config/constant.js";
+import {  DuplicateError, NotFoundError } from "../exceptions/apiError.js";
 import booksRepository from "../repository/books.repository.js";
 import userRepository from "../repository/users.repository.js";
 function barrowBook(name, email, title) {
@@ -13,7 +14,8 @@ function barrowBook(name, email, title) {
     name,
     email,
     title,
-    dueDate: new Date(currentDate.setDate(currentDate.getDate() + 15)).toISOString(),
+    borrowDate:currentDate.toISOString(),
+    dueDate: new Date(currentDate.setDate(currentDate.getDate() + final.daysToReturnBook)).toISOString(),
   };
   book.availableCopies-=1;
   return userRepository.barrowBook(receipt);
