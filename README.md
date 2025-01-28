@@ -34,7 +34,7 @@
   <h2>Installation</h2>
   <ol>
     <li>Clone the repository:</li>
-    <pre><code>git clone &lt;[repository_url](https://github.com/ManjuRamu/library-book-lending-system.git)&gt;</code></pre>
+    <pre><code>git clone &lt;https://github.com/ManjuRamu/library-book-lending-system.git&gt;</code></pre>
     <li>Navigate into the project directory:</li>
     <pre><code>cd &lt;library-book-lending-system&gt;</code></pre>
     <li>Install dependencies:</li>
