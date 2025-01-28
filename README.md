@@ -39,7 +39,7 @@
   <li>Install dependencies:</li>
   <pre><code>npm install</code></pre>
   <li>Load .env file (optional)</li>
-  <pre><p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/dev/src/config/env.js" target="_blank">required env</a></p>
+  <pre><p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/main/src/config/env.js" target="_blank">required env</a></p>
 </pre>
   <li>Start the server:</li>
     <pre><code>npm start</code></pre>
@@ -48,22 +48,25 @@
 </ol>
 <h2>Postman Collection</h2>
 <p>To test the API, you can import the Postman collection from the following directory:</p>
-<p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/dev/postmon-collection" target="_blank">Postman Collection Directory</a></p>
+<p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/main/postmon-collection" target="_blank">Postman Collection Directory</a></p>
+<h2>Books List</h2>
+<p>To test the API, use these avaiable books:</p>
+<p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/main/src/database/index.js" target="_blank">Available Books</a></p>
 
   <h2>Usage</h2>
-  <ol>
-    
+
     <li>The server will start on the port specified in the environment variables (<code>PORT</code>) or default to <code>3000</code>.</li>
     <li>The API will be available at:</li>
     <pre><code>http://localhost:3000/api/v1</code></pre>
     <li>Example endpoints:</li>
     <ul>
-      <li><strong>POST /user/book/borrow</strong>: Borrow a book.</li>
-      <li><strong>GET /user/book/borrow/{email}</strong>: View borrowed books by a user.</li>
-      <li><strong>DELETE /user/book/return/{email}/{title}</strong>: Return a borrowed book.</li>
-      <li><strong>PATCH /user/book/extend-due-date</strong>: Extend the due date for a borrowed book.</li>
+      <li>POST /user/book/borrow: Borrow a book.</li>
+      <li>GET /user/book/borrow/{email}?pageNo=1&pageCount=3&direction=asc: View borrowed books by a user, added pagintion and order</li>
+      <li>DELETE /user/book/return/{email}/{title}: Return a borrowed book.</li>
+      <li>PATCH /user/book/extend-due-date: Extend the due date for a borrowed book.</li>
+      <li>GET /book/borrow?pageNo=1&pageCount=3&direction=asc : Extend the due date for a borrowed book.</li>
     </ul>
-  </ol>
+
 
   <h2>Example Logs</h2>
   <p>The logs are outputted in a structured JSON format:</p>
