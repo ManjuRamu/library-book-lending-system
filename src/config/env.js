@@ -1,6 +1,5 @@
 import dotenv from 'dotenv';
 /*Please remove the default value.
-It cause issue by loading default value
 Use for demo purpose
 */
 dotenv.config()

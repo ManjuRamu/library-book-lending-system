@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Library Book Lending System API</title>
+  Library Book Lending System API
 </head>
 <body>
   <h1>Library Book Lending System API</h1>
@@ -38,6 +38,9 @@
   <pre><code>cd library-book-lending-system</code></pre>
   <li>Install dependencies:</li>
   <pre><code>npm install</code></pre>
+  <li>Load .env file (optional)</li>
+  <pre><p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/dev/src/config/env.js" target="_blank">required env</a></p>
+</pre>
   <li>Start the server:</li>
     <pre><code>npm start</code></pre>
     <li>Start the server in nodemon:</li>
