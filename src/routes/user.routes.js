@@ -5,9 +5,10 @@ import { validate } from "../middleware/validator/index.js";
 const userRouter = Router();
 
 userRouter.post(
-  "/book/barrow",
+  "/book/borrow",
   validate(userSchema.barrowBook),
-  userController.barrowBook,
-);
+  userController.borrowBook,
+)
+
 
 export default userRouter;

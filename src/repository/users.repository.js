@@ -1,10 +1,10 @@
-import { barrowBooks } from "../database/index.js";
+import { borrowBooks } from "../database/index.js";
 
 function barrowBook(receipt) {
-  barrowBooks.push(receipt);
+  borrowBooks.push(receipt);
   return receipt;
 }
 function isUserAlreadyBorrowedBook(title,email){
- return barrowBooks.find((barrow) => barrow.title === title && barrow.email === email)
+ return borrowBooks.find((barrow) => barrow.title === title && barrow.email === email)
 }
 export default { barrowBook,isUserAlreadyBorrowedBook };

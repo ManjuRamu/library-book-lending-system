@@ -1,5 +1,5 @@
 export const users = [],
-  barrowBooks = [],
+  borrowBooks = [],
   books = [
     { "title": "The Adventures of Huckleberry Finn", "availableCopies": 2 },
     { "title": "Moby Dick", "availableCopies": 3 },
