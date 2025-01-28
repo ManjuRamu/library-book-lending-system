@@ -51,7 +51,7 @@
 <p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/main/postmon-collection" target="_blank">Postman Collection Directory</a></p>
 <h2>Books List</h2>
 <p>To test the API, use these avaiable books:</p>
-<p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/main/postmon-collection" target="_blank">Postman Collection Directory</a></p>
+<p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/main/src/database/index.js" target="_blank">Available Books</a></p>
 
   <h2>Usage</h2>
   <ol>
