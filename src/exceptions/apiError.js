@@ -24,3 +24,8 @@ export class DuplicateError extends ApiError {
     super(message, statusCode ?? 409, meta);
   }
 }
+export class NoContent extends ApiError {
+  constructor(message, meta) {
+    super(message, 204, meta);
+  }
+}

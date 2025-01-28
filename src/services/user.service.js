@@ -40,5 +40,7 @@ function getListOfBorrowBook(email, pageNo, pageLimit, direction) {
     direction,
   );
 }
-
-export default { barrowBook, getListOfBorrowBook };
+function returnTheBook(email, title){
+return userRepository.returnBooks(email, title)
+}
+export default { barrowBook, getListOfBorrowBook,returnTheBook };

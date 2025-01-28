@@ -18,4 +18,9 @@ function getBorrowBookList(req, res, next) {
   res.status(200).send(receipt);
 }
 
-export default { borrowBook, getBorrowBookList };
+function returnTheBook(req, res, next){
+  const {title, email} = req.params
+  userService.returnTheBook(email.toLowerCase(),title)
+  return res.status(200).send({message:"Book returned successfully"})
+}
+export default { borrowBook, getBorrowBookList, returnTheBook };

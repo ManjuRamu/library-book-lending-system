@@ -10,6 +10,7 @@ userRouter
     validate(userSchema.barrowBook),
     userController.borrowBook,
   )
-  .get("/book/borrow/:email", userController.getBorrowBookList);
+  .get("/book/borrow/:email", userController.getBorrowBookList)
+  .delete('/book/return/:email/:title', userController.returnTheBook);
 
 export default userRouter;

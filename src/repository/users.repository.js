@@ -1,4 +1,5 @@
 import { borrowBooks } from "../database/index.js";
+import { NoContent } from "../exceptions/apiError.js";
 
 function barrowBook(receipt) {
   borrowBooks.push(receipt);
@@ -21,8 +22,16 @@ function getUserBorrowedBooksByEmail(email, start, end, direction) {
   }
   return { totalCount: userBorrowedBooks.length, books };
 }
+function returnBooks(email, title){
+   const find = borrowBooks.find((book) => book.title === title && book.email === email)
+   if(!find) throw new NoContent("user not borrow the book")
+   const index =   borrowBooks.indexOf(find)
+   borrowBooks.splice(index, 1)
+   return;
+}
 export default {
   barrowBook,
   isUserAlreadyBorrowedBook,
   getUserBorrowedBooksByEmail,
+  returnBooks
 };
