@@ -39,7 +39,7 @@
   <li>Install dependencies:</li>
   <pre><code>npm install</code></pre>
   <li>Load .env file (optional)</li>
-  <pre><p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/dev/config/env.js" target="_blank">required env</a></p>
+  <pre><p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/dev/src/config/env.js" target="_blank">required env</a></p>
 </pre>
   <li>Start the server:</li>
     <pre><code>npm start</code></pre>
