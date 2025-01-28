@@ -1,5 +1,5 @@
 import winston from "winston";
-import { ENV } from "./env.js";
+import { ENV } from "../config/env.js";
 const { timestamp } = winston.format;
 
 export const logger = winston.createLogger({

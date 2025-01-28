@@ -1,7 +1,9 @@
+import dotenv from 'dotenv';
 /*Please remove the default value.
 It cause issue by loading default value
 Use for demo purpose
 */
+dotenv.config()
 export const ENV = Object.freeze(
   Object.seal({
     PORT: process.env.PORT ?? 3000,

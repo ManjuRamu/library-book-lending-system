@@ -1,4 +1,4 @@
-import { ENV } from "../utils/env.js";
+import { ENV } from "../config/env.js";
 import { logger } from "../utils/loggers.js";
 
 export function globalErrorHandler(err, req, res, next) {

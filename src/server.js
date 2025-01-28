@@ -1,6 +1,6 @@
 import express from "express";
 import { logger } from "./utils/loggers.js";
-import { ENV } from "./utils/env.js";
+import { ENV } from "./config/env.js";
 import { logRequest } from "./middleware/logs.js";
 import router from "./routes/index.js";
 import { globalErrorHandler } from "./middleware/error.handler.js";
