@@ -1,4 +1,4 @@
-import { barrowBooks } from "../database";
+import { barrowBooks } from "../database/index.js";
 
 function barrowBook(receipt){
     barrowBooks.push(receipt)

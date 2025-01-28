@@ -13,6 +13,7 @@ export function logRequest(print) {
         return (req, res, next) => {
             const requestId = uuidv4().toString();
             res.setHeader("X-Request-Id",requestId)
+            logger.defaultMeta = {...logger.defaultMeta, requestId }
             next()
         }
     }

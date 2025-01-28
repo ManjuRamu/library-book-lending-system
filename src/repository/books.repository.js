@@ -1,4 +1,4 @@
-import { books } from "../database"
+import { books } from "../database/index.js"
 
 function findBookByTitle(title){
 return books.find((book) => book.title === title)

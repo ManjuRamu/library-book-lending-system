@@ -7,7 +7,9 @@ import { globalErrorHandler } from './middleware/error.handler.js';
 export const app = new express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+app.get("", (req,res) => {
+    res.status(200).send({message:"server is healthy"})
+})
 app.use(logRequest(ENV.LOG_REQUEST))
 app.use("/api/v1",router)
 app.use(globalErrorHandler)
