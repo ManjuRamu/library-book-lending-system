@@ -5,7 +5,7 @@ function barrowBook(name, email, title) {
   if (!book) throw BadRequest("book not found");
   if (book.availableCopies <= 0)
     throw BadRequest("No available copies of this book");
-    const currentDate = new Date();
+  const currentDate = new Date();
   const receipt = {
     name,
     email,
@@ -15,4 +15,4 @@ function barrowBook(name, email, title) {
   return userRepository.barrowBook(receipt);
 }
 
-export default {barrowBook}
+export default { barrowBook };
