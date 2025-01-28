@@ -18,15 +18,20 @@ function getBorrowBookList(req, res, next) {
   res.status(200).send(receipt);
 }
 
-function returnTheBook(req, res, next){
-  const {title, email} = req.params
-  userService.returnTheBook(email.toLowerCase(),title)
-  return res.status(200).send({message:"Book returned successfully"})
+function returnTheBook(req, res, next) {
+  const { title, email } = req.params;
+  userService.returnTheBook(email.toLowerCase(), title);
+  return res.status(200).send({ message: "Book returned successfully" });
 }
 
-function extendedBorrowPeriod(req, res, next){
-  const {title, email} = req.body
- const result = userService.extendBorrowPeriod(email, title)
+function extendedBorrowPeriod(req, res, next) {
+  const { title, email } = req.body;
+  const result = userService.extendBorrowPeriod(email, title);
   res.status(200).send(result);
 }
-export default { borrowBook, getBorrowBookList, returnTheBook, extendedBorrowPeriod };
+export default {
+  borrowBook,
+  getBorrowBookList,
+  returnTheBook,
+  extendedBorrowPeriod,
+};

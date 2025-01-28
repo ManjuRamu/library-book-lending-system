@@ -39,10 +39,19 @@ function getListOfBorrowBook(email, pageNo, pageLimit, direction) {
     direction,
   );
 }
-function returnTheBook(email, title){
-return userRepository.returnBooks(email, title)
+function returnTheBook(email, title) {
+  return userRepository.returnBooks(email, title);
 }
-function extendBorrowPeriod (email, title){
-  return userRepository.extendBorrowPeriod(email, title, final.daysToReturnBook)
+function extendBorrowPeriod(email, title) {
+  return userRepository.extendBorrowPeriod(
+    email,
+    title,
+    final.daysToReturnBook,
+  );
 }
-export default { barrowBook, getListOfBorrowBook,returnTheBook,extendBorrowPeriod };
+export default {
+  barrowBook,
+  getListOfBorrowBook,
+  returnTheBook,
+  extendBorrowPeriod,
+};

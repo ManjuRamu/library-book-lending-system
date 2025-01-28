@@ -11,7 +11,11 @@ userRouter
     userController.borrowBook,
   )
   .get("/book/borrow/:email", userController.getBorrowBookList)
-  .delete('/book/return/:email/:title', userController.returnTheBook)
-  .patch('/book/extend-due-date',validate(userSchema.extendBorrowPeriod) ,userController.extendedBorrowPeriod);
+  .delete("/book/return/:email/:title", userController.returnTheBook)
+  .patch(
+    "/book/extend-due-date",
+    validate(userSchema.extendBorrowPeriod),
+    userController.extendedBorrowPeriod,
+  );
 
 export default userRouter;
