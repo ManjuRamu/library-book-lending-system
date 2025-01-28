@@ -30,21 +30,26 @@
     <li><strong>CORS and Security</strong>: <strong>CORS</strong> is enabled to allow cross-origin requests from specific domains. <strong>Helmet</strong> is used to add various HTTP headers to help secure the application from common attacks (e.g., XSS, clickjacking).</li>
     <li><strong>JSON Validation</strong>: The API uses <strong>Joi</strong> to validate incoming request data (such as user data, book titles, etc.) to ensure they conform to the expected schema. This helps prevent errors due to invalid inputs.</li>
   </ul>
-
-  <h2>Installation</h2>
-  <ol>
-    <li>Clone the repository:</li>
-    <pre><code>git clone &lt;repository_url&gt;</code></pre>
-    <li>Navigate into the project directory:</li>
-    <pre><code>cd &lt;project_directory&gt;</code></pre>
-    <li>Install dependencies:</li>
-    <pre><code>npm install</code></pre>
-  </ol>
+<h2>Installation</h2>
+<ol>
+  <li>Clone the repository:</li>
+  <pre><code>git clone https://github.com/ManjuRamu/library-book-lending-system.git</code></pre>
+  <li>Navigate into the project directory:</li>
+  <pre><code>cd library-book-lending-system</code></pre>
+  <li>Install dependencies:</li>
+  <pre><code>npm install</code></pre>
+  <li>Start the server:</li>
+    <pre><code>npm start</code></pre>
+    <li>Start the server in nodemon:</li>
+    <pre><code>npm run dev</code></pre>
+</ol>
+<h2>Postman Collection</h2>
+<p>To test the API, you can import the Postman collection from the following directory:</p>
+<p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/dev/postmon-collection" target="_blank">Postman Collection Directory</a></p>
 
   <h2>Usage</h2>
   <ol>
-    <li>Start the server:</li>
-    <pre><code>npm start</code></pre>
+    
     <li>The server will start on the port specified in the environment variables (<code>PORT</code>) or default to <code>3000</code>.</li>
     <li>The API will be available at:</li>
     <pre><code>http://localhost:3000/api/v1</code></pre>
