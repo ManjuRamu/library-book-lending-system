@@ -4,4 +4,7 @@ function barrowBook(receipt) {
   barrowBooks.push(receipt);
   return receipt;
 }
-export default { barrowBook };
+function isUserAlreadyBorrowedBook(title,email){
+ return barrowBooks.find((barrow) => barrow.title === title && barrow.email === email)
+}
+export default { barrowBook,isUserAlreadyBorrowedBook };

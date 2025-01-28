@@ -6,13 +6,14 @@ export const barrowBook = Joi.object({
       .max(30)
       .required()
       .lowercase()
+      .custom((value) => value.replace(/\s+/g," "))
       .label("user name required and length between 3 to 30"),
     email: Joi.string()
       .required()
       .lowercase()
       .email()
       .label("user email required"),
-    title: Joi.string().required().lowercase().label("Book title required"),
+    title: Joi.string().required().label("Book title required"),
   })
     .required()
     .prefs({ stripUnknown: true }),
