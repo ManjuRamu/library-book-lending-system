@@ -24,20 +24,24 @@ function getUserBorrowedBooksByEmail(email, start, end, direction) {
   }
   return { totalCount: userBorrowedBooks.length, books };
 }
-function returnBooks(email, title){
-   const find = borrowBooks.find((book) => book.title === title && book.email === email)
-   if(!find) throw new NoContent("user not borrow the book")
-   const index =   borrowBooks.indexOf(find)
-   borrowBooks.splice(index, 1);
-   const foundBook = books.find(book => book.title === title)
-   foundBook.availableCopies +=1; 
-   return;
+function returnBooks(email, title) {
+  const find = borrowBooks.find(
+    (book) => book.title === title && book.email === email,
+  );
+  if (!find) throw new NoContent("user not borrow the book");
+  const index = borrowBooks.indexOf(find);
+  borrowBooks.splice(index, 1);
+  const foundBook = books.find((book) => book.title === title);
+  foundBook.availableCopies += 1;
+  return;
 }
-function extendBorrowPeriod(email, title, duration){
-  const find = borrowBooks.find((book) => book.title === title && book.email === email)
-  if(!find) throw new NoContent("user not borrow the book")
+function extendBorrowPeriod(email, title, duration) {
+  const find = borrowBooks.find(
+    (book) => book.title === title && book.email === email,
+  );
+  if (!find) throw new NoContent("user not borrow the book");
   const currentDueDate = new Date(find.dueDate);
-  find.dueDate = addDaysToISOString(currentDueDate, duration)
+  find.dueDate = addDaysToISOString(currentDueDate, duration);
   return find;
 }
 export default {
@@ -45,5 +49,5 @@ export default {
   isUserAlreadyBorrowedBook,
   getUserBorrowedBooksByEmail,
   returnBooks,
-  extendBorrowPeriod
+  extendBorrowPeriod,
 };
