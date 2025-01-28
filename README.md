@@ -61,10 +61,11 @@
     <pre><code>http://localhost:3000/api/v1</code></pre>
     <li>Example endpoints:</li>
     <ul>
-      <li><strong>POST /user/book/borrow</strong>: Borrow a book.</li>
-      <li><strong>GET /user/book/borrow/{email}</strong>: View borrowed books by a user.</li>
-      <li><strong>DELETE /user/book/return/{email}/{title}</strong>: Return a borrowed book.</li>
-      <li><strong>PATCH /user/book/extend-due-date</strong>: Extend the due date for a borrowed book.</li>
+      <li>POST /user/book/borrow: Borrow a book.</li>
+      <li>GET /user/book/borrow/{email}?pageNo=1&pageCount=3&direction=asc: View borrowed books by a user, added pagintion and order</li>
+      <li>DELETE /user/book/return/{email}/{title}: Return a borrowed book.</li>
+      <li>PATCH /user/book/extend-due-date: Extend the due date for a borrowed book.</li>
+      <li>GET /book/borrow?pageNo=1&pageCount=3&direction=asc : Extend the due date for a borrowed book.</li>
     </ul>
   </ol>
 
