@@ -43,6 +43,9 @@
     <li>Start the server in nodemon:</li>
     <pre><code>npm run dev</code></pre>
 </ol>
+<h2>Postman Collection</h2>
+<p>To test the API, you can import the Postman collection from the following directory:</p>
+<p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/dev/postmon-collection" target="_blank">Postman Collection Directory</a></p>
 
   <h2>Usage</h2>
   <ol>
