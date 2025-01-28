@@ -1,6 +1,7 @@
 import express from 'express';
-import { logger, logRequest } from './utils/loggers.js';
+import { logger } from './utils/loggers.js';
 import { ENV } from './utils/env.js';
+import { logRequest } from './middleware/logs.js';
 export const app = new express();
 app.use(logRequest())
 

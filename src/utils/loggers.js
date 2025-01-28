@@ -1,6 +1,8 @@
 import winston from "winston";
 import { ENV } from "./env.js";
-const { combine, timestamp, json, colorize, printf } = winston.format;
+const { timestamp } = winston.format;
+
+
 export const logger = winston.createLogger({
     level: ENV.LOG_LEVEL,
     format: winston.format.combine(
@@ -11,9 +13,3 @@ export const logger = winston.createLogger({
     transports: [new winston.transports.Console()],
 })
 
-export function logRequest() {
-    return (req, res, next) => {
-        logger.info("request", { path: req.path, method: req.method, url: req.url, query: req.query, path: req.path, body: req.body })
-        next()
-    }
-}
