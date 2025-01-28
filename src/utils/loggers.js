@@ -7,7 +7,7 @@ export const logger = winston.createLogger({
     level: ENV.LOG_LEVEL,
     format: winston.format.combine(
         timestamp(),
-        winston.format.json() // Ensure JSON output format
+        winston.format.json() 
     ),
     defaultMeta: { service: `library-book-lending-system-${process.env.ENVIRONMENT ?? "dev"}` },
     transports: [new winston.transports.Console()],
