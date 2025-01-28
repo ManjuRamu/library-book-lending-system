@@ -4,11 +4,12 @@ import userSchema from "../middleware/validator/schema/user.schema.js";
 import { validate } from "../middleware/validator/index.js";
 const userRouter = Router();
 
-userRouter.post(
-  "/book/borrow",
-  validate(userSchema.barrowBook),
-  userController.borrowBook,
-)
-
+userRouter
+  .post(
+    "/book/borrow",
+    validate(userSchema.barrowBook),
+    userController.borrowBook,
+  )
+  .get("/book/borrow/:email", userController.getBorrowBookList);
 
 export default userRouter;

@@ -6,5 +6,16 @@ function borrowBook(req, res, next) {
   res.status(200).send(receipt);
 }
 
+function getBorrowBookList(req, res, next) {
+  const { pageNo = 1, pageCount = 5, direction = "desc" } = req.query;
+  const email = req.params.email.toLowerCase();
+  const receipt = userService.getListOfBorrowBook(
+    email,
+    pageNo,
+    pageCount,
+    direction,
+  );
+  res.status(200).send(receipt);
+}
 
-export default { borrowBook };
+export default { borrowBook, getBorrowBookList };

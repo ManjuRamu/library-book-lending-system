@@ -6,11 +6,12 @@ function findBookByTitle(title) {
 function getBorrowedBooks(start, end, direction) {
   const totalCount = borrowBooks.length;
   let books;
-  if(direction === 'asc'){
-    books =  borrowBooks.slice(start, end)
+  if (direction === "asc") {
+    books = borrowBooks.slice(start, end);
+  } else {
+    books = structuredClone(borrowBooks).reverse().slice(start, end);
   }
- else {books =  structuredClone(borrowBooks).reverse().slice(start,end)}
- return {totalCount, books}
+  return { totalCount, books };
 }
 
-export default { findBookByTitle,getBorrowedBooks };
+export default { findBookByTitle, getBorrowedBooks };

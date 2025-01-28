@@ -14,13 +14,13 @@ export class BadRequest extends ApiError {
   }
 }
 export class NotFoundError extends ApiError {
-    constructor(message, meta) {
-      super(message, 404, meta);
-    }
+  constructor(message, meta) {
+    super(message, 404, meta);
   }
+}
 
-export class DuplicateError extends ApiError{
-    constructor(message, statusCode,meta){
-        super(message,statusCode ??  409 ,  meta)
-    }
-}  
+export class DuplicateError extends ApiError {
+  constructor(message, statusCode, meta) {
+    super(message, statusCode ?? 409, meta);
+  }
+}
