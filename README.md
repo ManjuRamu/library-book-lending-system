@@ -39,7 +39,7 @@
   <li>Install dependencies:</li>
   <pre><code>npm install</code></pre>
   <li>Load .env file (optional)</li>
-  <pre><p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/dev/src/config/env.js" target="_blank">required env</a></p>
+  <pre><p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/main/src/config/env.js" target="_blank">required env</a></p>
 </pre>
   <li>Start the server:</li>
     <pre><code>npm start</code></pre>
@@ -48,7 +48,10 @@
 </ol>
 <h2>Postman Collection</h2>
 <p>To test the API, you can import the Postman collection from the following directory:</p>
-<p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/dev/postmon-collection" target="_blank">Postman Collection Directory</a></p>
+<p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/main/postmon-collection" target="_blank">Postman Collection Directory</a></p>
+<h2>Books List</h2>
+<p>To test the API, use these avaiable books:</p>
+<p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/main/postmon-collection" target="_blank">Postman Collection Directory</a></p>
 
   <h2>Usage</h2>
   <ol>
