@@ -1,5 +1,7 @@
-import { borrowBooks } from "../database/index.js";
+import { final } from "../config/constant.js";
+import { books, borrowBooks } from "../database/index.js";
 import { NoContent } from "../exceptions/apiError.js";
+import { addDaysToISOString } from "../utils/date.utils.js";
 
 function barrowBook(receipt) {
   borrowBooks.push(receipt);
@@ -26,12 +28,22 @@ function returnBooks(email, title){
    const find = borrowBooks.find((book) => book.title === title && book.email === email)
    if(!find) throw new NoContent("user not borrow the book")
    const index =   borrowBooks.indexOf(find)
-   borrowBooks.splice(index, 1)
+   borrowBooks.splice(index, 1);
+   const foundBook = books.find(book => book.title === title)
+   foundBook.availableCopies +=1; 
    return;
+}
+function extendBorrowPeriod(email, title, duration){
+  const find = borrowBooks.find((book) => book.title === title && book.email === email)
+  if(!find) throw new NoContent("user not borrow the book")
+  const currentDueDate = new Date(find.dueDate);
+  find.dueDate = addDaysToISOString(currentDueDate, duration)
+  return find;
 }
 export default {
   barrowBook,
   isUserAlreadyBorrowedBook,
   getUserBorrowedBooksByEmail,
-  returnBooks
+  returnBooks,
+  extendBorrowPeriod
 };

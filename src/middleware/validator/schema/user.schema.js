@@ -17,6 +17,16 @@ export const barrowBook = Joi.object({
   })
     .required()
     .prefs({ stripUnknown: true }),
-}).prefs({ stripUnknown: true });
+}).unknown(true);
 
-export default { barrowBook };
+export const extendBorrowPeriod = Joi.object({
+  body:Joi.object({
+    title: Joi.string().required().label("Book title required"),
+    email: Joi.string()
+      .required()
+      .lowercase()
+      .email()
+      .label("user email required")
+  }).required().prefs({stripUnknown:true})
+}).unknown(true)
+export default { barrowBook,extendBorrowPeriod };

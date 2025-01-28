@@ -2,6 +2,7 @@ import { final } from "../config/constant.js";
 import { DuplicateError, NotFoundError } from "../exceptions/apiError.js";
 import booksRepository from "../repository/books.repository.js";
 import userRepository from "../repository/users.repository.js";
+import { addDaysToISOString } from "../utils/date.utils.js";
 import { getLimitOffset } from "../utils/pagination.js";
 function barrowBook(name, email, title) {
   const book = booksRepository.findBookByTitle(title);
@@ -18,15 +19,13 @@ function barrowBook(name, email, title) {
       422,
       isAlreadyBorrowed,
     );
-  const currentDate = new Date();
+  const currentDate = new Date().toISOString();
   const receipt = {
     name,
     email,
     title,
-    borrowDate: currentDate.toISOString(),
-    dueDate: new Date(
-      currentDate.setDate(currentDate.getDate() + final.daysToReturnBook),
-    ).toISOString(),
+    borrowDate: currentDate,
+    dueDate: addDaysToISOString(currentDate, final.daysToReturnBook),
   };
   book.availableCopies -= 1;
   return userRepository.barrowBook(receipt);
@@ -43,4 +42,7 @@ function getListOfBorrowBook(email, pageNo, pageLimit, direction) {
 function returnTheBook(email, title){
 return userRepository.returnBooks(email, title)
 }
-export default { barrowBook, getListOfBorrowBook,returnTheBook };
+function extendBorrowPeriod (email, title){
+  return userRepository.extendBorrowPeriod(email, title, final.daysToReturnBook)
+}
+export default { barrowBook, getListOfBorrowBook,returnTheBook,extendBorrowPeriod };
