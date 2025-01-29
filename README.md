@@ -46,6 +46,13 @@
     <li>Start the server in nodemon:</li>
     <pre><code>npm run dev</code></pre>
 </ol>
+<h2>Testing with Jest</h2>
+<p>To run unit tests for the project, Follow the steps below:</p>
+<ol>
+  <pre><code>npm run test</code></pre>
+  <li>This will run all the unit tests in the project, and you can see the results in the console.</li>
+</ol>
+
 <h2>Postman Collection</h2>
 <p>To test the API, you can import the Postman collection from the following directory:</p>
 <p><a href="https://github.com/ManjuRamu/library-book-lending-system/tree/main/postmon-collection" target="_blank">Postman Collection Directory</a></p>
@@ -67,12 +74,7 @@
       <li>GET /book/borrow?pageNo=1&pageCount=3&direction=asc : Extend the due date for a borrowed book.</li>
     </ul>
 
-<h2>Testing with Jest</h2>
-<p>To run unit tests for the project, Follow the steps below:</p>
-<ol>
-  <pre><code>npm run test</code></pre>
-  <li>This will run all the unit tests in the project, and you can see the results in the console.</li>
-</ol>
+
 
   <h2>Example Logs</h2>
   <p>The logs are outputted in a structured JSON format:</p>
