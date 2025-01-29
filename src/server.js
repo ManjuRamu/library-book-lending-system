@@ -25,7 +25,7 @@ app.use(logRequest(ENV.LOG_REQUEST));
 app.use("/api/v1", router);
 app.use(globalErrorHandler);
 
-app.listen(ENV.PORT, ENV.HOST, () => {
-  logger.info("server is runnig", { port: ENV.PORT, host: ENV.HOST });
+export const server = app.listen(ENV.PORT, ENV.HOST, () => {
+  logger.info('server is runnig', { port: ENV.PORT, host: ENV.HOST });
   logger.info(`http://${ENV.HOST}:${ENV.PORT}`);
 });
