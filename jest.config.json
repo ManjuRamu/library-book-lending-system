@@ -1,0 +1,30 @@
+{
+  "testEnvironment": "node",
+  "verbose": true,
+  "transform": {
+    "\\.[jt]sx?$": "babel-jest"
+  },
+  "collectCoverageFrom": [
+    "src/**/*.{js, mjs}",
+    "!**/node_modules/**"
+  ],
+  "collectCoverage": true,
+  "coverageDirectory": "coverage",
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "node"
+  ],
+  "coverageProvider": "v8",
+  "testMatch": [
+    "<rootDir>/test/**/*.test.js"
+  ],
+  "transformIgnorePatterns": [
+    "/node_modules/*"
+  ],
+  "globals": {
+    "ts-jest": {
+      "isolatedModules": true
+    }
+  }
+}
