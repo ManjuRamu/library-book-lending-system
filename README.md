@@ -67,6 +67,12 @@
       <li>GET /book/borrow?pageNo=1&pageCount=3&direction=asc : Extend the due date for a borrowed book.</li>
     </ul>
 
+<h2>Testing with Jest</h2>
+<p>To run unit tests for the project, Follow the steps below:</p>
+<ol>
+  <pre><code>npm run test</code></pre>
+  <li>This will run all the unit tests in the project, and you can see the results in the console.</li>
+</ol>
 
   <h2>Example Logs</h2>
   <p>The logs are outputted in a structured JSON format:</p>
