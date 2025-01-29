@@ -1,6 +1,10 @@
 import supertest from 'supertest';
 import { app, server } from '../src/server.js';
+import { logger } from '../src/utils/loggers.js';
 export const requester = supertest(app);
+beforeAll(() => {
+  logger.info = jest.fn();
+});
 afterAll(() => {
   server.close();
 });
