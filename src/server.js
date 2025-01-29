@@ -11,7 +11,7 @@ app.use(helmet());
 app.use(
   cors({
     origin: "*", //change it based on you domain,
-    methods: ["GET", "POST", "PATCH"],
+    methods: ["GET", "POST", "PATCH", "DELETE","OPTIONS"],
   }),
 );
 app.use(express.urlencoded({ extended: true }));
